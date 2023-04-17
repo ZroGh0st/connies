@@ -19,8 +19,7 @@ body{
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(350px,1fr));
   grid-gap: 20px 40px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: auto;
 }
 .heading{
   background-color: #cb202d;
