@@ -71,7 +71,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
       
-                <div class="mx-auto my-3 d-lg-none d-sm-block d-xs-block w3-hide-small">
+                <div class="mx-auto my-3 d-lg-none d-sm-block d-xs-block w3-hide-small  w3-hide-medium">
                   <div class="input-group">
                     <span class="border-warning input-group-text bg-warning text-white"><i class="fa-solid fa-magnifying-glass"></i></span>
                     <input type="text" class="form-control border-warning" style="color:#7a7a7a">
@@ -116,34 +116,53 @@
 
 
             <!-- Content -->
-            <div class="contact_us">
-              <div class="responsive-container-block bigContainer">
-                <div class="responsive-container-block Container">
-                  <div class="responsive-cell-block wk-desk-5 wk-ipadp-4 wk-tab-12 wk-mobile-12">
-                    <img class="mainImg" src="img/logo2.jpg">
-                  </div>
-                  <div class="responsive-cell-block wk-desk-7 wk-ipadp-8 wk-tab-12 wk-mobile-12">
-                    <p class="text-blk heading">
-                      Contact Me
-                    </p>
-                    <div>
-                      <p> <i class="bi bi-geo-alt-fill"></i> <strong>ABSFI Canteen, Busco,
-                        Butong, Quezon, Philippines, 8710</strong></p>
-                    </div>
-                    <div id="map-container" style="margin-left: 17rem; z-index: 999;"></div>
+            <div class="cont">
+            <div style="text-align:center">
+              <h2>Contact Us</h2>
+              <p>Experience good food, or leave us a message:</p>
+            </div>
+            <div class="row">
+              <div class="column">
+                <img src="imgs/absfi.jpg" style="width:100%">
+                
 
-                    <div>
-                      
-                    </div>
-
-                  </div>
-                </div>
+              </div>
+              <div class="column">
+                <form class="form-inline" onsubmit="openModal()" id="myForm">
+                  <label for="fname">Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your name.." required>
+                  <label for="email">Email</label>
+                  <input type="text" id="email" name="email" placeholder="Your email" required>
+                  <label for="subject">Comment</label>
+                  <textarea id="subject" name="subject" placeholder="Tell us how we can improve our service.." style="height:170px" required></textarea>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <!-- Create a container for the map
+                <div id="map-container"></div>  -->
               </div>
             </div>
+          </div>
             
+          <!-- Modal -->
+          <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                  <p>One fine body&hellip;</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
 
-            
-      <!--Footer-->
+                 <!--Footer-->
   <footer style="background-color: orange;">
     <div class="container p-4">
       <div class="row">
@@ -185,40 +204,35 @@
     </div>
     <!-- Copyright -->
   </footer>
-  
 
-<!-- Create a container for the map -->
-<div id="map-container"></div>
 
-<!-- Include the Google Maps API script -->
-<script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEg9F_jnYKlCg9ZqCQTL-5yVe99qAYZ_E&callback=initMap"
-  async
-  defer
-></script>
+   <!-- Include the Google Maps API script -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEg9F_jnYKlCg9ZqCQTL-5yVe99qAYZ_E&callback=initMap"
+      async
+      defer
+    ></script>
 
-<!-- Create a script to initialize the map -->
-<script>
-  function initMap() {
-    // Set the coordinates for the center of the map
-    var myLatLng = { lat: 7.809555005775461, lng: 125.07443170942659 };
-    
-    // Create a new map object
-    var map = new google.maps.Map(document.getElementById("map-container"), {
-      center: myLatLng,
-      zoom: 18,
-    });
+    <!-- Create a script to initialize the map -->
+    <script>
+      function initMap() {
+        // Set the coordinates for the center of the map
+        var myLatLng = { lat: 7.809555005775461, lng: 125.07443170942659 };
+        
+        // Create a new map object
+        var map = new google.maps.Map(document.getElementById("map-container"), {
+          center: myLatLng,
+          zoom: 18,
+        });
 
-    // Create a marker for the center of the map
-    var marker = new google.maps.Marker({
-      position: myLatLng,
-      map: map,
-      title: "San Francisco, CA",
-    });
-  }
-</script>
-
-  
+        // Create a marker for the center of the map
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: "San Francisco, CA",
+        });
+      }
+    </script>
 </body>
 
 </html>
