@@ -171,12 +171,12 @@ function displayCart() {
   for(var i in cartArray) {
     output += "<tr>"
       + "<td>" + cartArray[i].name + "</td>" 
-      + "<td>(" + cartArray[i].price + ")</td>"
+      + "<td>(P" + cartArray[i].price + ")</td>"
       + "<td><div class='input-group'>"
       + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
       + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
       //+ " = " 
-      + "<td>" + cartArray[i].total + "</td>" 
+      + "<td>P" + cartArray[i].total + "</td>" 
   }
 
   $('.show-cart').html(output);
@@ -260,7 +260,10 @@ $('#order-now-btn').click(function() {
 
   output += "</tbody>"
     + "</table>"
-    + "<p>Total price: $" + shoppingCart.totalCart() + "</p>";
+    + "<p>Total price: P" + shoppingCart.totalCart() + "</p>"
+
+  // Call sendEmail function with form details and cart items as message
+  sendEmail(name, phone, email, output);
 
   // Display modal with form details and cart items
   $('#cart').modal('hide');
@@ -273,8 +276,10 @@ $('#order-now-btn').click(function() {
 });
 
 
- //SendEmail function
- function sendEmail(name, phone, email, cartArray) {
+
+
+//SendEmail function
+function sendEmail(name, phone, email, cartArray) {
   var output = "";
 
   // Build output string for cart items
@@ -327,3 +332,8 @@ $('#close').click(function() {
   shoppingCart.clearCart();
   displayCart();
 });
+
+
+
+   
+
