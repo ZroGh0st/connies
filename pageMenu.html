@@ -13,8 +13,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="menufinal.css">
-  
+ 
  </head>
+ 
 
     
 <body>
@@ -124,15 +125,19 @@
                           <div id="search-container">
                             <input
                               type="search"
-                              id="search-input"
+                              id="myInput"
                               placeholder="Search menu item name here.."
                             />
                             <button id="search">Search</button>
                           </div>
+
                           <div id="buttons">
                             <button class="button-value" onclick="filterProduct('all')">All</button>
+                            <button class="button-value" onclick="filterProduct('breakfast')">
+                              Breakfast
+                            </button>
                             <button class="button-value" onclick="filterProduct('lunch')">
-                              Specialties
+                              Lunch
                             </button>
                             <button class="button-value" onclick="filterProduct('dinner')">
                               Dinner
@@ -140,18 +145,22 @@
                             <button class="button-value" onclick="filterProduct('snacks')">
                               Sweets & Snacks
                             </button>
-                            <button class="button-value" onclick="filterProduct('beverages')">
-                              Beverages
-                            </button>
+
+
                           </div>
+
+
+            
+
+                               
 
 
 
                            <!--Breakfast--->
 
-                           <h3 class="breakfast">Rise and Shine </h3>
+                           <h3 class="break">Rise and Shine </h3>
     
-                      <div class="menu">
+                      <div class="menu" id="breakfast">
 
                         <div class="food-items">
                             <img src="food/avocadotoast.png">
@@ -702,7 +711,9 @@
     });
     </script>
 
-  
+<script src="menu.js"></script>
+
+
 </body>
 
 </html>

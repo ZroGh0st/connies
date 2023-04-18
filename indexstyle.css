@@ -4,13 +4,13 @@
 
 .box-1{
     flex: 1;
-    max-height: 700vh;
+    max-height: 100vh;
 
 }
 
 .box-2{
     flex: 1;
-    max-height: 700vh;
+    max-height: 100vh;
 
 }
 
@@ -49,13 +49,43 @@ a {
     .centerOnMobile {
       text-align:center
     }
+    .container-fluid{
+      display: flex;
+  }
+
+    #logo{
+      width: 100%;
+      height: 70%;
+      margin-right: 20px;
+  
+  }
+  .text{
+    font-size: 15px;
+    font-weight: 50;
+    margin-right: 50px;
+}
+
+
   }
 
 @media (max-width: 400px){
-    .container-fluid{
-        height: 500px;
-        flex-direction: column;
-    }
+
+    #logo{
+      width: 100%;
+      height: 70%;
+      margin-right: 20px;
+ 
+  }
+
+
+  .text{
+    font-size: 15px;
+    font-weight: 50;
+    margin-right: 50px;
+    margin:auto;
+}
+
+
 }
 
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
