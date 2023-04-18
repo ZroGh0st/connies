@@ -10,7 +10,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="contactstyle.css">
-  
+  <style>
+    #map-container {
+      height: 30vh;
+      width: 30vh;
+    }
+  </style>
  </head>
 
     
@@ -154,8 +159,8 @@
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
           <h5 class="mb-3 text-dark">follow us</h5>
-          <a href="#!" style="color: #4f4f4f;"><i class="bi bi-facebook"></i></a>
-          <a href="#!" style="color: #4f4f4f;"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/conniesltngbhy/" target="_blank" style="color: #4f4f4f;"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/conniesltngbhy/" target="_blank" style="color: #4f4f4f;"><i class="bi bi-instagram"></i></a>
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
           <h5 class="mb-1 text-dark">Store Hours</h5>
@@ -182,40 +187,36 @@
   </footer>
   
 
-    <!-- Include the Google Maps API script -->
-    <style>
-      / Set the height of the map container /
-      #map-container {
-        height: 400px;
-        width: 600px;
-      }
-    </style>
-   <script
-   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEg9F_jnYKlCg9ZqCQTL-5yVe99qAYZ_E&callback=initMap"
-   async
-   defer
- ></script>
-  <!-- Create a script to initialize the map -->
-  <script>
-      function initMap() {
-        // Set the coordinates for the center of the map
-        var myLatLng = { lat: 7.809555005775461, lng: 125.07443170942659 };
-        
-        // Create a new map object
-        var map = new google.maps.Map(document.getElementById("map-container"), {
-          center: myLatLng,
-          zoom: 18,
-        });
+<!-- Create a container for the map -->
+<div id="map-container"></div>
 
-        // Create a marker for the center of the map
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          title: "San Francisco, CA",
-        });
-      }
-    </script>
-  <script src="index.js"></script>
+<!-- Include the Google Maps API script -->
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEg9F_jnYKlCg9ZqCQTL-5yVe99qAYZ_E&callback=initMap"
+  async
+  defer
+></script>
+
+<!-- Create a script to initialize the map -->
+<script>
+  function initMap() {
+    // Set the coordinates for the center of the map
+    var myLatLng = { lat: 7.809555005775461, lng: 125.07443170942659 };
+    
+    // Create a new map object
+    var map = new google.maps.Map(document.getElementById("map-container"), {
+      center: myLatLng,
+      zoom: 18,
+    });
+
+    // Create a marker for the center of the map
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: "San Francisco, CA",
+    });
+  }
+</script>
 
   
 </body>
