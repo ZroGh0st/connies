@@ -28,17 +28,19 @@ body{
   padding: 60px 0 30px 0;
   grid-column: 1/-1; 
 }
-.heading>h1{
-  font-weight: 400;
-  font-size: 30px;
-  letter-spacing: 10px;
-  margin-bottom: 10px;
-}
 .heading>h3{
   font-weight: 600;
   font-size: 22px;
   letter-spacing: 5px;
   text-align: center;
+}
+.break{
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 5px;
+  text-align: center;
+  margin-top: 100px;
+
 }
 .food-items{
   display: grid;
@@ -130,6 +132,7 @@ body{
   background-color: #ff6700;
   color: #ffffff;
 }
+
 
 
 @media screen and (max-width:540px){
