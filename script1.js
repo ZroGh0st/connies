@@ -272,6 +272,56 @@ $('#order-now-btn').click(function() {
   });
 });
 
+
+ //SendEmail function
+ function sendEmail(name, phone, email, cartArray) {
+  var output = "";
+
+  // Build output string for cart items
+  output += "<table class='table'>"
+    + "<thead>"
+    + "<tr>"
+    + "<th>Product</th>"
+    + "<th>Price</th>"
+    + "<th>Quantity</th>"
+    + "<th>Subtotal</th>"
+    + "</tr>"
+    + "</thead>"
+    + "<tbody>";
+
+  for (var i in cartArray) {
+    output += "<tr>"
+      + "<td>" + cartArray[i].name + "</td>"
+      + "<td>" + cartArray[i].price + "</td>"
+      + "<td>" + cartArray[i].count + "</td>"
+      + "<td>" + cartArray[i].total + "</td>"
+      + "</tr>";
+  }
+
+  output += "</tbody>"
+    + "</table>"
+    + "<p>Total price: P" + shoppingCart.totalCart() + "</p>"
+
+  var params = {
+    name: name,
+    phone: phone,
+    email: email,
+    message: output,
+  };
+
+  const serviceID = "service_3ei4w7i"
+  const templateID = "template_g6gjtvd"
+
+  emailjs.send(serviceID, templateID, params).then((res) => {
+    document.getElementById("name").value = "",
+    document.getElementById("phone").value = "",
+    document.getElementById("email").value = "",
+    console.log(res);
+    alert("Order Placed Successfully");
+
+  }).catch((err) => console.log(err));
+}
+
 // Clear items
 $('#close').click(function() {
   shoppingCart.clearCart();
