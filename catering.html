@@ -11,6 +11,15 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="menufinal.css">
   
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("W6Aghwe1jY2gmknl5");
+   })();
+</script>
  </head>
 
     
@@ -138,13 +147,14 @@
                                     <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
                                     <p class="w3-text-blue-grey w3-large w3-text-orange"><b><i class="bi bi-geo-alt-fill"></i>ABSFI Canteen, Busco,Butong, Quezon, Philippines, 8710</b></p>
                                     <p>You can also contact us by phone 088-327-4533 or email catering.connies@gmail.com, or you can send us a message here:</p>
-                                    <form action="/action_page.php" target="_blank">
-                                    <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-                                    <p><input class="w3-input w3-padding-16" type="number" placeholder="Contact Number" required name="Contact Number"></p>
-                                    <p><input class="w3-input w3-padding-16" type="number" placeholder="How many people" required name="People"></p>
-                                    <p><input class="w3-input w3-padding-16" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
-                                    <p><input class="w3-input w3-padding-16" type="text" placeholder="Message/Special requirements" required name="Message"></p>
-                                    <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
+                                    <form onsubmit="reset(); return false;">
+                                    <p><input class="w3-input w3-padding-16" id="name" type="text" placeholder="Name" required name="Name"></p>
+                                    <p><input class="w3-input w3-padding-16" id="phone" type="number" placeholder="Contact Number" required name="Contact Number"></p>
+                                    <p><input class="w3-input w3-padding-16" id="email" type="email" placeholder="Email address" required name="Email"></p>
+                                    <p><input class="w3-input w3-padding-16" id="people" type="number" placeholder="How many people" required name="People"></p>
+                                    <p><input class="w3-input w3-padding-16" id="datetime" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+                                    <p><input class="w3-input w3-padding-16" id="message" type="text" placeholder="Message/Special requirements" required name="Message"></p>
+                                    <p><button class="w3-button w3-light-grey w3-section"  type="submit" onclick="sendEmail()">SEND MESSAGE</button></p>
                                     </form>
                                 </div>
 
@@ -198,10 +208,37 @@
     </div>
     <!-- Copyright -->
   </footer>
-  
+   
+  <script>
+    function sendEmail(){
+        var params = {
+            name: document.getElementById("name").value,
+            Phonenumber: document.getElementById("phone").value,
+            email: document.getElementById("email").value,
+            people: document.getElementById("people").value,
+            datetime: document.getElementById("datetime").value,
+            message: document.getElementById("message").value,  
+        };
+      
 
- 
+      const serviceID = "service_3ei4w7i"
+      const templateID = "template_1iktnht"
 
+      emailjs.send(serviceID,templateID,params).then((res) => {
+        document.getElementById("name").value = "",
+        document.getElementById("Phonenumber").value = "",
+        document.getElementById("email").value = "",
+        document.getElementById("datetime").value = "",
+        document.getElementById("people").value = "",
+        document.getElementById("message").value = "", 
+        console.log(res);
+        alert("message sent");
+
+      })
+      .catch((err) => console.log(err))
+    }
+
+</script>
   
 </body>
 
