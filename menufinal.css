@@ -131,6 +131,7 @@ body{
 .active {
   background-color: #ff6700;
   color: #ffffff;
+  border-color: aqua;
 }
 
 
