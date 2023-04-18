@@ -29,327 +29,164 @@
           <span class="bar"></span>
           <span class="bar"></span>
       </div>
-      <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm">
-        <div class="container">
-          <a class="navbar-brand w3-text-orange" href="index.html"><i class="bi bi-shop-window"></i> <strong>CONNIE'S</strong></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+      <ul class="navbar__menu">
+          <li class="navbar__item">
+              <a href="index.html" class="navbar__links"> HOME </a>
+          </li>
+          <li class="navbar__item">
+              <a href="about2.html" class="navbar__links"> ABOUT </a>
+          </li>
+          <li class="navbar__item">
+              <a href="menu.html" class="navbar__links"> MENU </a>
+          </li>
+          <li class="navbar__item">
+              <a href="catering.html" class="navbar__links"> CATERING </a>
+          </li>
+          <li class="navbar__item">
+              <a href="fifth.html" class="navbar__links"> CONTACT US </a>
+          </li>
+          <li class="navbar__item">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart"><a href="#"></a><i class="fa-solid fa-cart-shopping"></i> ( <span class="total-count"></span> )</button>
+              <button class="clear-cart btn btn-danger"> Clear Cart</button></div>
+        </li>
+      </ul>
+  </div>
+</nav>
+  </header>
+  <div>
+  </div>
+  <br>
+  <br>
+  <br>
+  
+<!--Group card--->
+<div class="text">
+    <h1>Our Menu</h1>
+</div>
+<br>
+<br>
+<div class="card-container">
+  <div class="card">
+    <img src="img/Beefstake.png" alt="Image 1">
+    <div class="card-content">
+      <h5>Bistek</h5>
       
-                <div class="mx-auto my-3 d-lg-none d-sm-block d-xs-block w3-hide-small">
-                            <div class="input-group">
-                              <span class="border-warning input-group-text bg-warning text-white"><i class="fa-solid fa-magnifying-glass"></i></span>
-                              <input type="text" class="form-control border-warning" style="color:#7a7a7a">
-                              <button class="btn btn-warning text-white">Search</button>
-                            </div>
-                          </div>
-                          <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-                            <div class="ms-auto d-none d-lg-block">
-                              <div class="input-group">
-              
-                              </div>
-                            </div>
-                            <ul class="navbar-nav ms-auto ">
-                            
-                              <li class="nav-item">
-                                <a class="nav-link mx-2 text-uppercase" href="index.html">Home</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link mx-2 text-uppercase" href="aboutUS.html">ABOUT</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link mx-2 text-uppercase" href="pageMenu.html">MENU</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link mx-2 text-uppercase" href="catering.html">CATERING</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link mx-2 text-uppercase" href="contactus.html">CONTACT US</a>
-                              </li>
-                            </ul>
-                            <ul class="navbar-nav ms-auto">
-                              <li class="nav-item">
-                                <a class="nav-link mx-2 text-uppercase" href="#"><i class="bi bi-cart"></i> Cart</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link mx-2 text-uppercase" href="#"><i class="bi bi-person-circle"></i> Account</a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </nav>
+      <p>₱150</p>
+      <a href="#" data-name="Bistek" data-price="150" class="add-to-cart btn" style="background-color: rgb(255, 115, 0); color: white;">Add to cart</a>
+    </div>
+  </div>
 
-                         <!--End of Navbar--->
+  <div class="card">
+    <img src="img/Adobo.png" alt="Image 2">
+    <br>
+    <div class="card-content">
+      <h5>Adobo</h5>
+      
+      <p>₱200</p>
+      <a href="#" data-name="Adobo" data-price="200" class="add-to-cart btn" style="background-color: rgb(255, 115, 0); color: white;">Add to cart</a>
+    </div>
+  </div>
 
-                         <div class="heading">
-                          <h3>&mdash; OUR MENU &mdash; </h3>
-
-                            
-                          </div>
-
-                          <div id="search-container">
-                            <input
-                              type="search"
-                              id="search-input"
-                              placeholder="Search menu item name here.."
-                            />
-                            <button id="search">Search</button>
-                          </div>
-                          <div id="buttons">
-                            <button class="button-value" onclick="filterProduct('all')">All</button>
-                            <button class="button-value" onclick="filterProduct('lunch')">
-                              Specialties
-                            </button>
-                            <button class="button-value" onclick="filterProduct('dinner')">
-                              Dinner
-                            </button>
-                            <button class="button-value" onclick="filterProduct('snacks')">
-                              Sweets & Snacks
-                            </button>
-                            <button class="button-value" onclick="filterProduct('beverages')">
-                              Beverages
-                            </button>
-                          </div>
-
-
-
-                           <!--Breakfast--->
-
-                           <h3 class="break">Rise and Shine </h3>
+  <div class="card">
+    <img src="img/Babyback Ribs.png" alt="Image 3">
+    <div class="card-content">
+      <h5>Baby Back Ribs</h5>
     
-                      <div class="menu">
+      <p>₱350</p>
+      <a href="#" data-name="BabyBackRibs" data-price="350" class="add-to-cart btn" style="background-color: rgb(255, 115, 0); color: white;">Add to cart</a>
+    </div>
+  </div>
 
-                        <div class="food-items">
-                            <img src="food/avocadotoast.png">
-                            <div class="details">
-                                <div class="details-sub">
-                                    <h5>Avocado Toast</h5>
-                                    <h5 class="price"> ₱150 </h5>
-                                </div>
-                                <button>Add To Cart</button>
-                            </div>
-                        </div>
-                
-                        <div class="food-items">
-                            <img src="food/scrambled.png">
-                            <div class="details">
-                                <div class="details-sub">
-                                    <h5>Scrambled Eggs</h5>
-                                    <h5 class="price"> ₱110 </h5>
-                                </div>
-                                <button>Add To Cart</button>
-                            </div>
-                        </div>
-                
-                        <div class="food-items">
-                            <img src="food/frenchtoast.png">
-                            <div class="details">
-                                <div class="details-sub">
-                                    <h5>French Toast</h5>
-                                    <h5 class="price"> ₱100 </h5>
-                                </div>
-                                <button>Add To Cart</button>
-                            </div>
-                        </div>
-                
-                        <div class="food-items">
-                            <img src="food/Pancake.png">
-                            <div class="details">
-                                <div class="details-sub">
-                                    <h5>Pancake</h5>
-                                    <h5 class="price"> ₱100 </h5>
-                                </div>
-                               <button>Add To Cart</button>
-                            </div>
-                        </div>
-                
-                        <div class="food-items">
-                            <img src="food/waffles.png">
-                            <div class="details">
-                                <div class="details-sub">
-                                    <h5>Waffles</h5>
-                                    <h5 class="price"> ₱110 </h5>
-                                </div>
-                                <button>Add To Cart</button>
-                            </div>
-                        </div>
-                
-                        <div class="food-items">
-                            <img src="food/Salad.png">
-                            <div class="details">
-                                <div class="details-sub">
-                                    <h5>Salad</h5>
-                                    <h5 class="price"> ₱200 </h5>
-                                </div>
-                                <button>Add To Cart</button>
-                            </div>
-                        </div>
-
-                        <div class="food-items">
-                          <img src="food/Longsilog.png">
-                          <div class="details">
-                              <div class="details-sub">
-                                  <h5>Longsilog</h5>
-                                  <h5 class="price"> ₱120 </h5>
-                              </div>
-                              <button>Add To Cart</button>
-                          </div>
-                      </div>
-
-                      <div class="food-items">
-                        <img src="food/tapasilog.png">
-                        <div class="details">
-                            <div class="details-sub">
-                                <h5>Tapsilog</h5>
-                                <h5 class="price"> ₱120 </h5>
-                            </div>
-                            <button>Add To Cart</button>
-                        </div>
-                    </div>
-
-                          <div class="food-items">
-                            <img src="food/bacsilog.png">
-                            <div class="details">
-                                <div class="details-sub">
-                                    <h5>Bacsilof</h5>
-                                    <h5 class="price"> ₱120 </h5>
-                                </div>
-                                <button>Add To Cart</button>
-                            </div>
-                        </div>
-
-                        <div class="food-items">
-                          <img src="food/Tosilog.png">
-                          <div class="details">
-                              <div class="details-sub">
-                                  <h5>Tosilog</h5>
-                                  <h5 class="price"> ₱120 </h5>
-                              </div>
-                              <button>Add To Cart</button>
-                          </div>
-                      </div>
-
-
-                      <div class="food-items">
-                        <img src="food/embosilog.png">
-                        <div class="details">
-                            <div class="details-sub">
-                                <h5>Embosilog</h5>
-                                <h5 class="price"> ₱120 </h5>
-                            </div>
-                            <button>Add To Cart</button>
-                        </div>
-                    </div>
-
-
-                    <div class="food-items">
-                      <img src="food/american.png">
-                      <div class="details">
-                          <div class="details-sub">
-                              <h5>American Breakfast</h5>
-                              <h5 class="price"> ₱200 </h5>
-                          </div>
-                         <button>Add To Cart</button>
-                      </div>
-                  </div>
-
+    <div class="card">
+      <img src="img/Beef Caldereta.png" alt="Image 1">
+      <div class="card-content">
+        <h5>Beef Caldereta</h5>
+       
+        <p>₱300</p>
+        <a href="#" data-name="BeefCaldereta" data-price="300" class="add-to-cart btn" style="background-color: rgb(255, 115, 0); color: white;">Add to cart</a>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="img/Beef Steak.png" alt="Image 2">
+      <br>
+      <div class="card-content">
+        <h5>Beef steak</h5>
+        
+        <p>₱400</p>
+        <a href="#" data-name="BeefSteak" data-price="400" class="add-to-cart btn" style="background-color: rgb(255, 115, 0); color: white;">Add to cart</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="img/Bualo.png" alt="Image 3">
+      <div class="card-content">
+        <h5>Bulalo</h5>
+    
+        <p>₱450</p>
+        <a href="#" data-name="Bulalo" data-price="450" class="add-to-cart btn" style="background-color: rgb(255, 115, 0); color: white;">Add to cart</a>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <img src="img/Kare-Kare.png" alt="Image 1">
+        <div class="card-content">
+          <h5>Kare-Kare</h5>
+          <p>₱320</p>
+          <a href="#" data-name="Kare-Kare" data-price="320" class="add-to-cart btn" style="background-color: rgb(255, 115, 0); color: white;">Add to cart</a>
+        </div>
+      </div>
+    
+      <div class="card">
+        <img src="img/Meatballs.png" alt="Image 2">
+        <div class="card-content">
+          <h5>Meatballs</h5>
+          <p>₱250</p>
+          <a href="#" data-name="Meatballs" data-price="250" class="add-to-cart btn" style="background-color: rgb(255, 115, 0); color: white;">Add to cart</a>
+        </div>
+      </div>
+    
+      <div class="card">
+        <img src="img/Porkchop.png" alt="Image 3">
+        <div class="card-content">
+          <h5>Pork Chops</h5>
+          <p>₱180</p>
+          <a href="#" data-name="PorkChops" data-price="180" class="add-to-cart btn" style="background-color: rgb(255, 115, 0); color: white;">Add to cart</a>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="img/Pork BBQ.png" alt="Image 1">
+          <div class="card-content">
+            <h5>Pork BBQ</h5>
+            <p>₱120</p>
+            <a href="#" data-name="PorkBBQ" data-price="120" class="add-to-cart btn" style="background-color: rgb(255, 115, 0); color: white;">Add to cart</a>
           </div>
-
-            <hr>
-
-             <!--Lunch or Dinner--->
-             <h3 class="break">Lunch or Dinner? </h3>
-
-             <div class="menu">
-
-
-                 <div class="food-items">
-                          <img src="food/Bistek.png">
-                          <div class="details">
-                              <div class="details-sub">
-                                  <h5>Bistek</h5>
-                                  <h5 class="price"> ₱250 </h5>
-                              </div>
-                              <button>Add To Cart</button>
-                          </div>
-                      </div>
-              
-                      <div class="food-items">
-                          <img src="food/karekare.png">
-                          <div class="details">
-                              <div class="details-sub">
-                                  <h5>Kare-Kare</h5>
-                                  <h5 class="price"> ₱350 </h5>
-                              </div>
-                              <button>Add To Cart</button>
-                          </div>
-                      </div>
-              
-                      <div class="food-items">
-                          <img src="food/Meatballs.png">
-                          <div class="details">
-                              <div class="details-sub">
-                                  <h5>Meatballs</h5>
-                                  <h5 class="price"> ₱150 </h5>
-                              </div>
-                              <button>Add To Cart</button>
-                          </div>
-                      </div>
-              
-                      <div class="food-items">
-                          <img src="food/Caldereta.png">
-                          <div class="details">
-                              <div class="details-sub">
-                                  <h5>Beef Caldereta</h5>
-                                  <h5 class="price"> ₱300 </h5>
-                              </div>
-                            <button>Add To Cart</button>
-                          </div>
-                      </div>
-              
-                      <div class="food-items">
-                          <img src="food/sweetandsour.png">
-                          <div class="details">
-                              <div class="details-sub">
-                                  <h5>Sweet & Sour</h5>
-                                  <h5 class="price"> ₱250 </h5>
-                              </div>
-                              <button>Add To Cart</button>
-                          </div>
-                      </div>
-              
-                      <div class="food-items">
-                          <img src="food/Salad.png">
-                          <div class="details">
-                              <div class="details-sub">
-                                  <h5>Salad</h5>
-                                  <h5 class="price"> ₱200 </h5>
-                              </div>
-                              <button>Add To Cart</button>
-                          </div>
-                      </div>
-
-                      <div class="food-items">
-                        <img src="food/Bualo.png">
-                        <div class="details">
-                            <div class="details-sub">
-                                <h5>Bulalo</h5>
-                                <h5 class="price"> ₱500 </h5>
-                            </div>
-                            <button>Add To Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="food-items">
-                      <img src="food/bayback.png">
-                      <div class="details">
-                          <div class="details-sub">
-                              <h5>Babyback Ribs</h5>
-                              <h5 class="price"> ₱400 </h5>
-                          </div>
-                          <button>Add To Cart</button>
-                      </div>
-                  </div>
+        </div>
+      
+        <div class="card">
+          <img src="img/Sweet _ Sour.png" alt="Image 2">
+          <div class="card-content">
+            <h5>Sweet and Sour</h5>
+            <p>₱190</p>
+            <a href="#" data-name="Sweet&Sour" data-price="190" class="add-to-cart btn" style="background-color: rgb(255, 115, 0); color: white;">Add to cart</a>
+          </div>
+        </div>
+      
+        <div class="card">
+          <img src="img/sisig.png" alt="Image 3">
+          <div class="card-content">
+            <h5>Sisig</h5>
+            <p>₱199</p>
+            <a href="#" data-name="Sisig" data-price="199" class="add-to-cart btn" style="background-color: rgb(255, 115, 0); color: white;">Add to cart</a>
+          </div>
+        </div>
+      
+        <!-- add more cards here -->
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
 
  <!-- Modal -->
  <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
